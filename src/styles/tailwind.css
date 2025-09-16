@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFAF9; /* warm off-white */
+    --color-foreground: #1F2937; /* rich charcoal */
+    --color-card: #FFFFFF; /* pure white */
+    --color-card-foreground: #1F2937; /* rich charcoal */
+    --color-popover: #FFFFFF; /* pure white */
+    --color-popover-foreground: #1F2937; /* rich charcoal */
+    --color-muted: #F3F4F6; /* light gray */
+    --color-muted-foreground: #6B7280; /* balanced gray */
+    --color-border: rgba(0, 0, 0, 0.08); /* subtle border */
+    --color-input: #FFFFFF; /* pure white */
+    --color-ring: #2563EB; /* trustworthy blue */
+
+    /* Brand Colors */
+    --color-primary: #2563EB; /* trustworthy blue */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #7C3AED; /* sophisticated purple */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    --color-accent: #F59E0B; /* warm amber */
+    --color-accent-foreground: #1F2937; /* rich charcoal */
+
+    /* State Colors */
+    --color-success: #10B981; /* fresh green */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F59E0B; /* warm amber */
+    --color-warning-foreground: #1F2937; /* rich charcoal */
+    --color-error: #EF4444; /* clear red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #EF4444; /* clear red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+
+    /* Shadows */
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-moderate: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-prominent: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    /* Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-caption: 'Inter', sans-serif;
+    --font-data: 'JetBrains Mono', monospace;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  .font-data {
+    font-family: var(--font-data);
+  }
+}
+
+@layer components {
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .shadow-moderate {
+    box-shadow: var(--shadow-moderate);
+  }
+
+  .shadow-prominent {
+    box-shadow: var(--shadow-prominent);
+  }
+
+  /* Animation utilities */
+  .transition-gentle {
+    transition: all 200ms ease-out;
+  }
+
+  .transition-smooth {
+    transition: all 300ms ease-out;
+  }
+}
